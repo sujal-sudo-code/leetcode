@@ -13,7 +13,7 @@ class Solution {
         return true;
     }
 
-    public boolean check(String s, int l, int r) {
+    private boolean check(String s, int l, int r) {
         while (l < r) {
             if (s.charAt(l) != s.charAt(r)) return false;
             l++;
