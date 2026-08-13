@@ -4,9 +4,8 @@ class Solution {
 
         while (l < r) {
             if (s.charAt(l) != s.charAt(r)) {
-                return palindrome(s, l + 1, r) || palindrome(s, l, r - 1);
+                return check(s, l + 1, r) || check(s, l, r - 1);
             }
-
             l++;
             r--;
         }
@@ -14,7 +13,7 @@ class Solution {
         return true;
     }
 
-    boolean palindrome(String s, int l, int r) {
+    public boolean check(String s, int l, int r) {
         while (l < r) {
             if (s.charAt(l) != s.charAt(r)) return false;
             l++;
